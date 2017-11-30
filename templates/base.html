@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+    <head>
+        <title>{{ title }}</title>
+<!--
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/foundation.css') }}">
+-->
+    </head>
+    <body>
+        <!-- Not logged_in Menu -->
+<!--
+        {% if logged_in == False %}
+        <ul class="menu">
+            <li class="{{ menu_login }}"><a href="/login">Login</a></li>
+            <li class="{{ menu_register }}"><a href="/register">Register</a></li>
+        </ul>
+        
+-->
+        <!-- logged_in Menu -->
+<!--
+        {% else %}
+        <ul class="menu">
+            <li class="{{ menu_home }}"><a href="/home">Home</a></li>
+            <li class="{{ menu_showcard }}"><a href="/showcard">Show Card</a></li>
+            <li class="{{ menu_findgames }}"><a href="/findgames">Find Games</a></li>
+            <li><a href="/logout">Logout</a></li>
+        </ul>
+        {% endif %}
+-->
+        <!-- Flash messages, and Callouts -->
+<!--
+        {% with messages = get_flashed_messages(with_categories=True) %}
+            {% for category, message in messages %}
+                {% if category == "success" %}
+                    <div class="callout success">
+                        <p>{{ message }}</p>
+                    </div>
+                {% elif category == "error" %}
+                    <div class="callout alert">
+                        <p>{{ message }}</p>
+                    </div>
+                {% elif category == "warning" %}
+                    <div class="callout warning">
+                        <p>{{ message }}</p>
+                    </div>
+                {% else %}
+                    <div class="callout secondary">
+                        <p>{{ message }}</p>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+-->
+        {% block body %}
+        {% endblock %}
+<!--
+    <script src="{{ url_for('static', filename='js/vendor/jquery.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/what-input.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/vendor/foundation.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+-->
+    </body>
+</html>
