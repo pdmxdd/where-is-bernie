@@ -1,0 +1,10 @@
+--- Virtual Environment ---
+virtualenv --python=python3 env_flask
+source env_flask/bin/activate
+--- Flask Web Server requirements ---
+pip3 install flask
+pip3 install flask-sqlalchemy
+pip3 install pymysql
+--- Raspberry pi requirements ---
+pip3 install requests
+pip3 install pypng
